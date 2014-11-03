@@ -34,7 +34,7 @@
             android:id="@+id/day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="-15dp"
             android:gravity="center"
             android:textColor="@color/blue"
             android:textSize="45sp" />

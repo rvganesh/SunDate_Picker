@@ -9,4 +9,4 @@
     android:numColumns="7"
     android:scrollbars="none"
     android:stretchMode="columnWidth"
-    android:verticalSpacing="5dp" />
+    android:verticalSpacing="2dp" />

@@ -17,8 +17,8 @@ import com.afkar.sundatepicker.tool.JDF;
  * Created by Alireza Afkar - 24/10/14
  */
 
-public class ExampleActivity extends FragmentActivity implements OnClickListener,
-		OnDateSetListener {
+public class ExampleActivity extends FragmentActivity implements
+		OnClickListener, OnDateSetListener {
 
 	Button dateOneBTN;
 	Button dateTwoBTN;
@@ -56,8 +56,8 @@ public class ExampleActivity extends FragmentActivity implements OnClickListener
 		boolean darkTheme = ((CheckBox) findViewById(R.id.darkCheckBox))
 				.isChecked();
 
-		DatePickerDialog dp = DatePickerDialog.newInstance(ExampleActivity.this,
-				id, darkTheme);
+		DatePickerDialog dp = DatePickerDialog.newInstance(
+				ExampleActivity.this, id, darkTheme);
 
 		if (!((CheckBox) findViewById(R.id.fontCheckBox)).isChecked())
 			dp.setTypeFace(Typeface.createFromAsset(getAssets(), "pFont.ttf"));
@@ -65,7 +65,7 @@ public class ExampleActivity extends FragmentActivity implements OnClickListener
 		if (v.getId() == R.id.date1)
 			dp.setInitialDate(dateOne.year, dateOne.month, dateOne.day);
 		else
-			dp.setInitialDate(dateTwo.year, dateTwo.month, dateTwo.day);
+			dp.setInitialDate(dateTwo.calendar);
 
 		if (((CheckBox) findViewById(R.id.redCheckBox)).isChecked())
 			dp.setMainColor(-2949011);
@@ -97,6 +97,7 @@ public class ExampleActivity extends FragmentActivity implements OnClickListener
 			this.year = year;
 			this.month = month;
 			this.day = day;
+			calendar = Calendar.getInstance();
 		}
 
 		void setDate(int year, int month, int day, Calendar calendar) {

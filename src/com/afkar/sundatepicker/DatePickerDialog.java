@@ -34,11 +34,9 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener 
 	private static TextView monthTV;
 	private static TextView yearTV;
 	private static TextView dayNameTV;
-	LinearLayout dayMonth;
 	TextView doneTV;
 
-	private static Typeface mTypeFace = null;
-
+	public static LinearLayout dayMonth;
 	FrameLayout frameLayout;
 	FragmentManager fragmentManager;
 
@@ -51,6 +49,7 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener 
 
 	private static GradientDrawable circle;
 	private static Boolean mVibrate;
+	private static Typeface mTypeFace = null;
 
 	private static OnDateSetListener mCallBack;
 	static int id;
@@ -173,13 +172,11 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener 
 	public void onClick(View v) {
 
 		if (v.getId() == R.id.year) {
-			// Util.clickAnimation(getActivity(), v, false);
 			yearTV.setTextColor(mBlue);
 			dayTV.setTextColor(mGry);
 			monthTV.setTextColor(mGry);
 			switchFragment(new YearMainFragement(minYear, maxYear));
 		} else if (v.getId() == R.id.dayMonthBack) {
-			// Util.clickAnimation(getActivity(), v, false);
 			yearTV.setTextColor(mGry);
 			dayTV.setTextColor(mBlue);
 			monthTV.setTextColor(mBlue);
@@ -226,6 +223,15 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener 
 
 	public void setInitialDate(int year, int month, int day) {
 		Date.setDate(year, month, day, false);
+	}
+
+	public void setInitialDate(Calendar calendar) {
+		JDF jdf = new JDF();
+		jdf.setGregorianDate(calendar.get(Calendar.YEAR),
+				calendar.get(Calendar.MONTH) + 1,
+				calendar.get(Calendar.DAY_OF_MONTH));
+		Date.setDate(jdf.getIranianYear(), jdf.getIranianMonth(),
+				jdf.getIranianDay(), false);
 	}
 
 	public void setVibrate(boolean vibrate) {

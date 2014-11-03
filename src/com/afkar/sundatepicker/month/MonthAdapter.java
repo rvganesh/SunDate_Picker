@@ -124,7 +124,6 @@ public class MonthAdapter extends BaseAdapter {
 					tv.setBackgroundDrawable(DatePickerDialog.getCircle());
 					tv.setTextColor(DatePickerDialog.getGrayColor());
 
-					// Util.clickAnimation(context, tv, true);
 					Util.tryVibrate(context);
 				}
 			});

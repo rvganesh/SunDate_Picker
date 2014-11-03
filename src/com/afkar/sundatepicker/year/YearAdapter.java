@@ -79,8 +79,8 @@ public class YearAdapter extends BaseAdapter {
 				Date.updateUI();
 
 				tv.setBackgroundDrawable(DatePickerDialog.getCircle());
-				// Util.clickAnimation(context, tv, true);
 				Util.tryVibrate(context);
+				DatePickerDialog.dayMonth.performClick();
 			}
 		});
 
