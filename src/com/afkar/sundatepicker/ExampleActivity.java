@@ -70,6 +70,9 @@ public class ExampleActivity extends FragmentActivity implements
 		if (((CheckBox) findViewById(R.id.redCheckBox)).isChecked())
 			dp.setMainColor(-2949011);
 
+		dp.setFutureDisabled(((CheckBox) findViewById(R.id.futureCheckBox))
+				.isChecked());
+
 		dp.show(getSupportFragmentManager(), "");
 	}
 

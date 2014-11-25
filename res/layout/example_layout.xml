@@ -6,12 +6,27 @@
     android:gravity="center"
     android:orientation="vertical" >
 
-    <CheckBox
-        android:id="@+id/fontCheckBox"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="@string/default_font" />
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/futureCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/only_today" />
+
+        <CheckBox
+            android:id="@+id/fontCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/default_font" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -43,10 +43,14 @@ public class MonthAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
+		int days = 30;
 		if (month < 6)
-			return 31 + 7 + startDay;
-		else
-			return 30 + 7 + startDay;
+			days = 31;
+
+		if (DatePickerDialog.maxMonth == month + 1)
+			days = today.getIranianDay();
+
+		return days + 7 + startDay;
 	}
 
 	@Override

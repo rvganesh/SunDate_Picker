@@ -54,6 +54,8 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener 
 	private static OnDateSetListener mCallBack;
 	static int id;
 
+	public static int maxMonth;
+
 	public DatePickerDialog() {
 
 	}
@@ -98,6 +100,7 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener 
 		mBlue = 0;
 		mGry = 0;
 		mTypeFace = null;
+		maxMonth = 0;
 
 		return datePickerDialog;
 	}
@@ -244,6 +247,25 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener 
 
 	public void setRequestID(int requestID) {
 		id = requestID;
+	}
+
+	public void setFutureDisabled(Boolean disabled) {
+		if (disabled) {
+			JDF jdf = new JDF();
+			maxMonth = jdf.getIranianMonth();
+			maxYear = jdf.getIranianYear();
+
+			if (minYear > maxYear)
+				minYear = maxYear - 1;
+
+			if (Date.getMonth() > jdf.getIranianMonth())
+				Date.setMonth(jdf.getIranianMonth());
+			if (Date.getDay() > jdf.getIranianDay())
+				Date.setDay(jdf.getIranianDay());
+			if (Date.getYear() > jdf.getIranianYear())
+				Date.setYear(jdf.getIranianYear());
+		} else
+			maxMonth = 0;
 	}
 
 	/*

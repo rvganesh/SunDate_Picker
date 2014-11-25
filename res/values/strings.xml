@@ -7,5 +7,6 @@
     <string name="red_color">رنگ قرمز</string>
     <string name="default_font">فونت پیشفرض</string>
     <string name="dark_theme">پوسته تیره</string>
+    <string name="only_today">عدم نمایش آینده</string>
 
 </resources>
