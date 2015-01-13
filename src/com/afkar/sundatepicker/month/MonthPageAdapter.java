@@ -13,16 +13,13 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 
 public class MonthPageAdapter extends FragmentPagerAdapter {
-	private String[] monthNames = { "فروردین", "اردیبهشت", "خرداد", "تیر",
-			"مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند" };
-
 	public MonthPageAdapter(FragmentManager fm) {
 		super(fm);
 	}
 
 	@Override
 	public CharSequence getPageTitle(int position) {
-		return monthNames[position];
+		return JDF.monthNames[position];
 	}
 
 	@Override
@@ -31,7 +28,7 @@ public class MonthPageAdapter extends FragmentPagerAdapter {
 				&& new JDF().getIranianYear() == Date.getYear())
 			return DatePickerDialog.maxMonth;
 		else
-			return monthNames.length;
+			return JDF.monthNames.length;
 	}
 
 	@Override

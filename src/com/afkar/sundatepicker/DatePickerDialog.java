@@ -189,8 +189,11 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener 
 				Calendar calendar = Calendar.getInstance();
 				JDF j = new JDF();
 				j.setIranianDate(Date.getYear(), Date.getMonth(), Date.getDay());
-				calendar.set(j.getGregorianYear(), j.getGregorianMonth(),
-						j.getGregorianDay());
+				try {
+					calendar = j.getGregorianCalendar(Date.getYear(),
+							Date.getMonth(), Date.getDay());
+				} catch (Exception e) {
+				}
 				mCallBack.onDateSet(id, calendar, Date.getYear(),
 						Date.getMonth(), Date.getDay());
 				Util.tryVibrate(getActivity());

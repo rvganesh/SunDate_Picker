@@ -69,8 +69,8 @@ public class JDF {
 				Locale.US);
 		Date myDate = dateFormat.parse(getGregorianDate());
 		Calendar calendar = Calendar.getInstance();
-		
 		calendar.setTime(myDate);
+		calendar.add(Calendar.MONTH, 1);
 
 		return calendar;
 	}
