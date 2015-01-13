@@ -3,12 +3,7 @@ SunDate Picker
 
 ** کتابخونه ای برای انتخاب تاریخ شمسی در اندروید.
 
-![](images/screen-shot.jpg)
-
- این کتابخونه برای استفاده در برنامه [مکتب](http://cafebazaar.ir/app/com.afkar.maktab) نوشته شده.
- ----------
-> درصورت استفاده از این کتابخونه لطفا در توضیحات نام کتابخونه رو ذکر کنید.
-
+![](/screen-shot.jpg)
 
 
 استفاده
@@ -51,6 +46,13 @@ SunDate Picker
 ----------
 
 در پروژه برنامه ی نمونه ی نوشته شده که کار با این کتابخونه رو نمایش میده
+
+برنامه هایی که از این کتابخانه استفاده می کنند
+---------------
+
+* [مکتـب](http://cafebazaar.ir/app/com.afkar.maktab)
+* [COL Reminder](https://play.google.com/store/apps/details?id=com.colapps.reminder)
+* از این کتابخانه استفاده می کنید؟ کافیست [به من توئیت بزنید](https://twitter.com/alireza_afkar) یا [یک ایمیل ارسال کنید](mailto:pesiran@gmail.com)
 
 License
 ----------
